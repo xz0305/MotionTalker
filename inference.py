@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# Copyright (c) Xuangeng Chu (xg.chu@outlook.com)
-
 import os
 import torch
 import argparse
@@ -210,10 +207,10 @@ if __name__ == '__main__':
     warnings.simplefilter("ignore", category=TqdmExperimentalWarning, lineno=0, append=False)
     # build args
     parser = argparse.ArgumentParser()
-    parser.add_argument('--image_path', '-i', default='/data/liuxueliang/xiaozhen/GAGAvatar-main/demos/MAN_1/images/0.jpg', type=str)
-    parser.add_argument('--driver_path', '-d', default='/data/liuxueliang/xiaozhen/GAGAvatar-main/demos/MAN_1/', type=str)
+    parser.add_argument('--image_path', '-i', default='images/0.jpg', type=str)
+    parser.add_argument('--driver_path', '-d', default='demos/MAN_1/', type=str)
     parser.add_argument('--force_retrack', '-f', action='store_true')
-    parser.add_argument('--resume_path', '-r', default='/data/liuxueliang/xiaozhen/GAGAvatar-main/outputs/GAGAvatar_VFHQ/Dec27_2354_qdibj/checkpoints/latest.pt', type=str)
+    parser.add_argument('--resume_path', '-r', default='checkpoints/latest.pt', type=str)
     args = parser.parse_args()
     # launch
     torch.set_float32_matmul_precision('high')
